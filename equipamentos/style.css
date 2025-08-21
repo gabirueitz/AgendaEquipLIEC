@@ -1,0 +1,110 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+.container {
+    display: flex;
+    max-width: 1200px;
+    margin: 20px auto;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    padding: 20px;
+}
+
+.equipamento-main {
+    flex-grow: 1;
+    padding-right: 20px;
+}
+
+.aside-menu {
+    width: 250px;
+    padding-left: 20px;
+    border-left: 1px solid #ddd;
+    box-sizing: border-box;
+}
+
+/* Títulos do menu lateral */
+.aside-menu h3 {
+    color: #333;
+    border-bottom: 2px solid #007db8;
+    padding-bottom: 5px;
+}
+
+.equipamento-lista {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.equipamento-lista li a {
+    text-decoration: none;
+    color: #555;
+    display: block;
+    padding: 10px 0;
+    border-bottom: 1px solid #eee;
+    transition: background-color 0.3s;
+}
+
+.equipamento-lista li a:hover {
+    background-color: #f9f9f9;
+    color: #007db8;
+}
+
+/* Estilo da foto */
+.equipamento-foto {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+/* Estilo dos detalhes (details) */
+.detalhes-equipamento {
+    /* Define uma largura máxima para o container */
+    max-width: 600px; /* Ajuste este valor conforme o seu layout */
+
+    /* Garante que o conteúdo que transborda horizontalmente seja quebrado para a próxima linha */
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+
+    /* Outros estilos que você já tinha */
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 15px;
+    background-color: #f9f9f9;
+}
+
+/* Títulos dos detalhes */
+.detalhes-equipamento summary {
+    font-size: 18px; /* Fonte maior para o summary */
+    font-weight: bold;
+    cursor: pointer;
+    list-style-type: none; /* Remove a seta padrão */
+}
+
+/* Adiciona um ícone de seta customizado */
+.detalhes-equipamento summary::before {
+    content: '+';
+    margin-right: 10px;
+    font-size: 1.2em;
+}
+
+.detalhes-equipamento[open] summary::before {
+    content: '-';
+}
+
+/* Conteúdo dos detalhes */
+.detalhes-equipamento p, .detalhes-equipamento ul {
+    font-size: 12px; /* Fonte para o conteúdo */
+    margin-top: 10px;
+    padding-left: 20px;
+}
+
+.detalhes-equipamento ul {
+    list-style-type: disc;
+}
